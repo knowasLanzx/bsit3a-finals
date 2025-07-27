@@ -17,6 +17,10 @@
           <v-icon left>mdi-google</v-icon>
           Sign in with Google
         </v-btn>
+          <v-btn color="blue" variant="elevated" block @click="signInWithDiscord">
+          <v-icon left></v-icon>
+          Sign in with Discord
+        </v-btn>
         </v-form>
 
         <div v-if="userInfo" class="mt-4 text-center">
@@ -36,6 +40,9 @@ export default {
   methods: {
     signInWithGoogle(){
       this.$auth.loginWith('google')
+    },
+    signInWithDiscord(){
+      this.$auth.loginWith('discord')
     }
   }
 };

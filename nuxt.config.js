@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - tadeo-qr-scanner',
-    title: 'tadeo-ar-scanner',
+    titleTemplate: '%s - finals',
+    title: 'finals',
     htmlAttrs: {
       lang: 'en'
     },
@@ -72,6 +72,20 @@ export default {
       redirectUri: "http://localhost:3000/auth/callback",
       codeChallengeMethod: "",
     },
+    discord: {
+       scheme: "oauth2",
+        endpoints: {
+        authorization: "https://discord.com/api/oauth2/authorize",
+        token: "https://discord.com/api/oauth2/token",
+        userInfo: "https://discord.com/api/users/@me"
+      },
+        clientId: "1398936404754563183",
+        clientSecret: "SxMg7mj1aSOd0ldWyWofQ3FpML72cdPq",
+        scope: ["identify", "email"],
+        responseType: "code",
+        grantType: "authorization_code",
+       redirectUri: "http://localhost:3000/auth/callback"
+      },
   }
 },
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
