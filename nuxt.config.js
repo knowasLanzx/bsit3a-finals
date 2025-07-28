@@ -69,7 +69,7 @@ export default {
       },
       responseType: "token id_token",
       scope: ["openid", "profile", "email"],
-      redirectUri: "http://localhost:3000/auth/callback",
+      redirectUri: process.env.REDIRECT_URI,
       codeChallengeMethod: "",
     },
     discord: {
@@ -84,7 +84,7 @@ export default {
         scope: ["identify", "email"],
         responseType: "code",
         grantType: "authorization_code",
-       redirectUri: "http://localhost:3000/auth/callback"
+       redirectUri: process.env.REDIRECT_URI
       },
   }
 },
